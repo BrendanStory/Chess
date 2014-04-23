@@ -1,36 +1,32 @@
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.*;
-import java.applet.*;
 
-class Piece extends JPanel implements ActionListener, MouseListener {
+class Piece {
 
-	public Display(String name) {
-		setName(name);
-		this.image = Piece.loadImage(name);
+	public String type;
+	public String color;
+
+	public Piece(String type, String color){
+		setType(type);
+		setColor(color);
 	}
 
-	public static Image loadImage(String name) {
-	 	Image image = null;
-	 	String path = null;
-			try	{
- 				path = "img" + File.separator + name + ".png";
- 				image = ImageIO.read(new File(path));
-			}  catch(IOException e) {
-				System.out.println("Could not load image at path: " + path) ;
-				System.exit(1);
-		 	}
 
-		 return image;
-
+	public String type(){
+		return type;
+	}
+	public void setType(String type){
+		this.type = type;
 	}
 
-	public String name(){
-		return name;
+
+	public String color(){
+		return color;
+	} 
+	public void setColor(String color){
+		this.color = color;
 	}
 
-	public void setName(String name){
-		this.name = name;
-	}
+	
+
+	//Images are 256 by 256//
 
 }

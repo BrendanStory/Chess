@@ -11,13 +11,37 @@ import javax.swing.*;
 import java.awt.event.*;
 
 class Board extends Applet implements ActionListener {
-	private Board board;
-
-	public void init(){
-
+	
+	public Display(String name) {
+		setName(name);
+		this.image = Piece.loadImage(name);
 	}
 
-	public void paint(Graphics g) {
-		super.paint(g);
-	}
+
+		public void draw(Graphics g, Rectangle r) {
+			g.drawImage(image, r.x, r.y, r.width, r.height, null);
+		}
+
+		public static Image loadImage(String name) {
+		 	Image image = null;
+		 	String path = null;
+				try	{
+	 				path = "img" + File.separator + name + ".png";
+	 				image = ImageIO.read(new File(path));
+				}  catch(IOException e) {
+					System.out.println("Could not load image at path: " + path) ;
+					System.exit(1);
+			 	}
+
+			 return image;
+
+		}
+
+		public String name(){
+			return name;
+		}
+
+		public void setName(String name){
+			this.name = name;
+		}
 }
