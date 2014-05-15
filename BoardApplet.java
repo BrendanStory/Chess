@@ -18,6 +18,14 @@ class Board extends Applet implements ActionListener {
 	}
 
 
+		public rectangle(Point topLeft, int width, int height ){
+
+			setWidth(width);
+			setHeight(height);
+
+			g.fillRect(topLeft.x, topLeft.y, width, height);
+		}
+
 		public void draw(Graphics g, Rectangle r) {
 			g.drawImage(image, r.x, r.y, r.width, r.height, null);
 		}
@@ -43,5 +51,11 @@ class Board extends Applet implements ActionListener {
 
 		public void setName(String name){
 			this.name = name;
+		}
+
+		public board(Point topLeft, int width, int height) {
+			rectangle( 0, 0, 1, 256, 256);
+			
+
 		}
 }

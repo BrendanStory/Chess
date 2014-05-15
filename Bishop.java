@@ -4,10 +4,14 @@ import java.awt.Rectangle;
 
 import javax.imageio.ImageIO;
 
-class Bishop extends JPanel, Movement implements ActionListener, MouseListener {
+class Bishop extends JPanel implements ActionListener, MouseListener {
 
 	//Moves the piece when clicked
 	public void mousePressed(MouseEvent e){
+
+	}
+
+	public void mouseReleased(MouseEvent e){
 
 	}
 

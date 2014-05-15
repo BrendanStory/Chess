@@ -4,7 +4,24 @@ import java.awt.Rectangle;
 
 import javax.imageio.ImageIO;
 
-class King extends JPanel, Movement implements ActionListener, MouseListener {
+class King extends JPanel implements ActionListener, MouseListener {
+	
+	//Moves the piece when clicked
+	public void mousePressed(MouseEvent e){
+
+	}
+
+	public void mouseReleased(MouseEvent e){
+		
+	}
+
+	//shows where the piece can move
+	public void mouseEntered(MouseEvent e){
+		
+	}
+
+	//Undoes the last command (Showing movement)
+	public void mouseExited(MouseEvent e){
 		
 	}
 
